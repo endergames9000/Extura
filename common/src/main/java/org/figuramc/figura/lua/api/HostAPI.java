@@ -644,7 +644,7 @@ public class HostAPI {
     @LuaWhitelist
     @LuaMethodDoc("host.set_pose")
     public void setPose(String pose) {
-        if(!allowExturaCheats()) return;
+        if(true) return;
         try{
             Pose _pose = Pose.valueOf(pose);
             this.minecraft.player.setPose(_pose);
@@ -663,7 +663,7 @@ public class HostAPI {
             value = "host.set_pos"
     )
     public void setPos(Object x, Double y, Double z) {
-        if (!allowExturaCheats()) return;
+        if (true) return;
         LocalPlayer player = this.minecraft.player;
         player.setPos(LuaUtils.parseVec3("player_setPos", x, y, z).asVec3());
     }
